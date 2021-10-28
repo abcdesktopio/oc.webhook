@@ -1,7 +1,7 @@
 # oc.webhook
 
 [webhookd service](https://github.com/ncarlier/webhookd) from Nicolas Carlier.
-service update application images and abcdesktop services
+This service update application images and abcdesktop services using bash script endpoint.
 
 ## Source 
 webhook source from webhookd https://github.com/ncarlier/webhookd
@@ -67,6 +67,23 @@ services:
     - /etc/kubernetes:/etc/kubernetes:ro
     - ./.htpasswd:/.htpasswd:ro
 ```
+
+
+### Request 
+
+http://localhost:8090/kubernetes/node
+
+http://localhost:8090/kubernetes/pod
+
+http://localhost:8090/kubernetes/rollout
+
+http://localhost:8090/kubernetes/rollout?daemonset=xxxx
+
+http://localhost:8090/kubernetes/daemonset
+
+http://localhost:8090/kubernetes/image-pull?image=xxxx
+
+http://localhost:8090/kubernetes/image-clean
 
 
 
