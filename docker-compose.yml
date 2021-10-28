@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+  webhookd:
+    hostname: webhookd
+    image: abcdesktopio/webhookd
+    container_name: webhookd
+    restart: always
+    ports:
+    - "8090:8080"
+    environment:
+    - WHD_HOOK_LOG_OUTPUT=true
+    - WHD_SCRIPTS=/scripts
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /etc/kubernetes:/etc/kubernetes:ro
