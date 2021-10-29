@@ -1,6 +1,6 @@
 # oc.webhook
 
-![Build and test oc.user images for amd64](https://github.com/abcdesktopio/oc.webhook/workflows/Build%20and%20test%20oc.user%20images%20linux%20amd64/badge.svg)
+![Docker Image CI](https://github.com/abcdesktopio/oc.webhook/workflows/Docker%20Image%20CI/badge.svg)
 ![Docker Stars](https://img.shields.io/docker/stars/abcdesktopio/oc.webhook.svg) 
 ![Docker Pulls](https://img.shields.io/docker/pulls/abcdesktopio/oc.webhook.svg)
 ![GNU GPL v2.0 License](https://img.shields.io/github/license/abcdesktopio/oc.webhook.svg)
