@@ -198,7 +198,7 @@ version: "3.5"
 services:
   webhookd:
     hostname: webhookd
-    image: abcdesktopio/webhookd:latest
+    image: abcdesktopio/webhookd
     container_name: webhookd
     restart: always
     ports:
