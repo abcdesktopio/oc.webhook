@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y  --no-install-recommends \
 
 # install webhookd
 # from ncarlier/webhookd 
+# read https://github.com/ncarlier/webhookd
+
 #COPY install.sh /tmp
 #RUN bash -x /tmp/install.sh		\ 
 #    && mv /root/.local/bin/webhookd /usr/bin \
@@ -39,7 +41,6 @@ RUN apt-get update && apt-get install -y  --no-install-recommends \
 # use kubeconfig
 ENV KUBECONFIG=/etc/kubernetes/admin.conf
 ENV NAMESPACE=abcdesktop
-ENV REGISTRY=abcdesktopio
 ENV WHD_SCRIPTS=/scripts
 # Maximum hook execution time in second, default is 10
 # change to 10 min
