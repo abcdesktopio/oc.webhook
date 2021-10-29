@@ -1,9 +1,10 @@
 # oc.webhook
 
-[webhookd service](https://github.com/ncarlier/webhookd) is a service developped by from Nicolas Carlier.
-abcdesktop add bash scripts to provide an out of band management service. 
-This service update application images and abcdesktop services using bash script endpoint.
 The goal of this service, is to expose management script API for gitlab, github or from a simple curl command outside abcdesktop service
+
+[webhookd service](https://github.com/ncarlier/webhookd) is a service developed by from Nicolas Carlier.
+abcdesktop add bash scripts to provide an out of band management service for the abcdeskop platform. 
+This service update application images or abcdesktop services using bash scripts endpoint.
 
 
 ## Webhookd source code 
@@ -36,6 +37,9 @@ PORT=8090
 
 # get version
 curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/
+#
+# return json like {"name":"webhookd","version":"v1.12.0"} 
+
 
 # get node
 curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/node
@@ -98,6 +102,15 @@ curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/rollout-status
 ## Endpoints
 
 
+### root endpoint
+
+| Endpoint `/`                | Description           | Command                         |
+|------------------------------------|-----------------------|---------------------------------|
+| /                   | get version | return data like `{"name":"webhookd","version":"v1.12.0"}`      |
+
+
+### kubernetes endpoints
+
 | Endpoint `/kubernetes`                | Description           | Command                         |
 |------------------------------------|-----------------------|---------------------------------|
 | /kubernetes/node                   | list kubernetes nodes | `kubectl get nodes -o json -n abcdesktop`      |
@@ -109,7 +122,7 @@ curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/rollout-status
 | /kubernetes/image-clean | remove docker image `"dangling=true"` on each node | get nodes list with `kubectl get nodes -l abcdesktoptype=worker` then run `docker -H $server:$DOCKERD_PORT  rmi` with result of `docker -H $server:$DOCKERD_PORT  images -q --filter "dangling=true"` |
 
 
-
+### docker endpoints
 
 | Endpoint `/docker`                   | Description           | Command                         |
 |------------------------------------|-----------------------|---------------------------------|
