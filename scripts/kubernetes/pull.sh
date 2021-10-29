@@ -5,19 +5,16 @@
 # docker
 
 if [ -z $image ]; then
-	image=$1
-fi
-
-if [ -z $image ]; then
 	echo 'image not set'
 	exit 1
 fi 
 
 if [ -z $REGISTRY ]; then
-	echo 'registry not set'
-	exit 1
+	echo "pulling image $image"
+else
+	image=$REGISTRY/$image
+	echo "pulling image $image"
 fi
-
 
 
 # set default value
@@ -34,6 +31,6 @@ fi
 
 for server in "${SERVERS[@]}";
 do
-	echo "docker -H $server:$DOCKERD_PORT  pull $REGISTRY/$image"
+	echo "docker -H $server:$DOCKERD_PORT pull $image"
         docker -H $server:$DOCKERD_PORT pull $REGISTRY/$image
 done
