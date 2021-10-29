@@ -32,5 +32,5 @@ fi
 for server in "${SERVERS[@]}";
 do
 	echo "docker -H $server:$DOCKERD_PORT pull $image"
-        docker -H $server:$DOCKERD_PORT pull $REGISTRY/$image
+        docker -H $server:$DOCKERD_PORT pull $image
 done
