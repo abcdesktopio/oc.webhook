@@ -169,6 +169,23 @@ services:
 
 ### Example with an .htpasswd 
 
+Run the `htpasswd` command. On ubuntu just 
+
+```
+apt-get install apache2-utils
+```
+
+Then add a password for `myuser` login
+
+```
+htpasswd -B -c .htpasswd myuser
+New password: *******
+Re-type new password: ******* 
+Adding password for user myuser
+```
+
+Then update the docker-compose yaml file
+
 ```
 version: "3.5"
 
