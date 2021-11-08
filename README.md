@@ -90,12 +90,9 @@ curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/rollout
 #
 # run "kubectl rollout restart daemonset $daemonset -n $NAMESPACE" command
 #
-
-
-#
 # run rollout for a daemonset liek daemonset-nginx
 # curl -v $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/rollout?daemonset=daemonset-nginx
-# return
+# 
 
 # run rollout status for daemonset
 curl $AUTH -XPOST $PROTOCOL://$SERVER:$PORT/kubernetes/rollout-status
