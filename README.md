@@ -7,10 +7,10 @@
 
 
 The goal of this service, is to expose management scripts API for gitlab, github or from a simple curl command outside abcdesktop service.
-This webhook updates applications images and abcdesktop core services for continuous integration (CI) and continuous delivery (CD).
+This webhook updates applications images and abcdesktop core services for `continuous integration` (CI) and `continuous delivery` (CD).
 
 [webhookd service](https://github.com/ncarlier/webhookd) is a service developed by from Nicolas Carlier.
-abcdesktop add bash scripts to provide an out of band management service for the abcdesktop platform. 
+abcdesktop adds bash scripts to provide an out of band management service for the abcdesktop platform. 
 This service update application images or abcdesktop services using bash scripts endpoint.
 
 
