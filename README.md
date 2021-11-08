@@ -6,10 +6,11 @@
 ![GNU GPL v2.0 License](https://img.shields.io/github/license/abcdesktopio/oc.webhook.svg)
 
 
-The goal of this service, is to expose management script API for gitlab, github or from a simple curl command outside abcdesktop service
+The goal of this service, is to expose management scripts API for gitlab, github or from a simple curl command outside abcdesktop service.
+This webhook updates applications images and abcdesktop core services for continuous integration (CI) and continuous delivery (CD).
 
 [webhookd service](https://github.com/ncarlier/webhookd) is a service developed by from Nicolas Carlier.
-abcdesktop add bash scripts to provide an out of band management service for the abcdeskop platform. 
+abcdesktop add bash scripts to provide an out of band management service for the abcdesktop platform. 
 This service update application images or abcdesktop services using bash scripts endpoint.
 
 
@@ -21,7 +22,7 @@ This service update application images or abcdesktop services using bash scripts
 
 ## abcdesktop management scripts
 
-All scripts use filter to the default kubernetes namespace `abcdeskop`
+All scripts use filter to the default kubernetes projet's namespace `abcdesktop`
 
 ### client usage
 ``` 
