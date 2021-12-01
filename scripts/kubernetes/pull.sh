@@ -5,8 +5,7 @@
 # docker
 
 if [ -z $image ]; then
-	echo 'image not set'
-	exit 1
+	image=$1
 fi 
 
 if [ -z $REGISTRY ]; then
