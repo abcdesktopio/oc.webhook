@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# need
-# docker
-
-
-if [ -z $REGISTRY ]; then
-	echo 'registry not set'
-	exit 1
-fi
-
-
-
 # set default value
 DOCKERD_PORT=2375
 
